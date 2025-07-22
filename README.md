@@ -14,8 +14,24 @@ This project demonstrates how to build and use a machine learning model to predi
 ---
 
 ## 📁 Project Structure
-- **housing.csv**: Contains the data of California Housing price
-- **master.csv**:  A smaller dataset for testing and comparing how closely my model is predicting the median house values.
-- **input.csv**: Contains the features of houses which is to be predicted
-- **output.csv**: Contains the predicted housing values which can be compared from master.csv
-- **main.py**: Python program for applying all pre-processing, building the model and providing the final inference.
+
+- **housing.csv**:  
+  The primary dataset containing California housing data, including various features and the target variable `median_house_value`. This dataset is used for training and validating the machine learning model.
+
+- **master.csv**:  
+  A smaller, curated subset of data intended for evaluating model performance. It serves as a reference for comparing predicted values to actual median house values, allowing manual inspection and error analysis.
+
+- **input.csv**:  
+  A dataset consisting of feature values for previously unseen housing instances. These are the input records on which the trained model will perform inference (i.e., predict the median house values).
+
+- **output.csv**:  
+  The file where the predicted `median_house_value` results are stored. This output can be compared directly with `master.csv` for validating the model's real-world predictive accuracy.
+
+- **main.py**:  
+  The central Python script responsible for:
+  - Loading and preprocessing the data (handling missing values, encoding, scaling, etc.)
+  - Training the regression model on `housing.csv`
+  - Performing predictions on data from `input.csv`
+  - Exporting the results to `output.csv`
+  - (Optionally) Comparing predictions with `master.csv` to assess model accuracy
+
